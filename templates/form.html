@@ -1,0 +1,68 @@
+<html>
+<body>
+<form action="{{url_for('predict_datapoint')}}" method="POST">
+    <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter age (18-85)" min="18" max="85">
+    </div>
+
+    <div class="form-group">
+        <label for="tenure">Tenure (months):</label>
+        <input type="number" id="tenure" name="tenure" placeholder="Enter tenure (1-72 months)" min="1" max="72">
+    </div>
+
+    <div class="form-group">
+        <label for="service_type">Service Type:</label>
+        <select id="service_type" name="service_type">
+            <option value="Mobile">Mobile</option>
+            <option value="Internet">Internet</option>
+            <option value="TV">TV</option>
+            <option value="Mobile & Internet">Mobile & Internet</option>
+            <option value="Internet & TV">Internet & TV</option>
+            <option value="Mobile & TV">Mobile & TV</option>
+            <option value="All">All</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="monthly_charges">Monthly Charges:</label>
+        <input type="number" id="monthly_charges" name="monthly_charges" placeholder="Enter monthly charges ($20-$200)" min="20" max="200" step="0.01">
+    </div>
+
+    <div class="form-group">
+        <label for="total_charges">Total Charges:</label>
+        <input type="number" id="total_charges" name="total_charges" placeholder="Enter total charges ($100-$5000)" min="100" max="5000" step="0.01">
+    </div>
+
+    <div class="form-group">
+        <label for="contract">Contract:</label>
+        <select id="contract" name="contract">
+            <option value="Month-to-month">Month-to-month</option>
+            <option value="One year">One year</option>
+            <option value="Two year">Two year</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="payment_method">Payment Method:</label>
+        <select id="payment_method" name="payment_method">
+            <option value="Electronic check">Electronic check</option>
+            <option value="Credit card (automatic)">Credit card (automatic)</option>
+            <option value="Bank transfer (automatic)">Bank transfer (automatic)</option>
+            <option value="Mailed check">Mailed check</option>
+        </select>
+    </div>
+
+<div style="clear:both;"></div>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
